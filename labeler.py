@@ -1,6 +1,7 @@
 """One Groq call per transcript: the model fills an evidence checklist and the four labels.
 Python then enforces consistency guards and computes next_call_at from the callback words."""
 import json
+import re
 from datetime import datetime, timedelta
 from groq import Groq
 from timeparse import parse_time_text, at_11, fmt, IST
@@ -23,6 +24,10 @@ DEFAULT_SUB = {"Appointment Scheduled": "Clinic Visit", "Follow-up Required": "F
 BLOCKER_SUB = {"family": "Family Discussion", "cost": "Cost Concern", "travel": "Travel Constraint",
                "current_treatment": "Current Treatment", "treatment_concern": "Treatment Concern"}
 NO_CALLBACK = {"Invalid Lead", "Not Interested", "Unable to Assess"}
+
+# a customer asking the clinic to stop contacting them (not "don't call tomorrow")
+NO_CONTACT = (r"\b(?:don'?t|do not|never)\s+call\s+(?:me\s+)?(?:again|anymore|any more)\b"
+              r"|\bstop calling\b|\b(?:remove|delete)\s+my\s+(?:number|name|details)\b")
 
 STR_OR_NULL = {"type": ["string", "null"]}
 YES_NO = {"type": "string", "enum": ["yes", "no"]}
@@ -97,11 +102,17 @@ def extract(row):
         messages=[{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": user}],
         response_format={"type": "json_schema", "json_schema": {"name": "labels", "strict": True, "schema": SCHEMA}},
     )
-    return apply_guards(json.loads(resp.choices[0].message.content)), resp.usage
+    return apply_guards(json.loads(resp.choices[0].message.content), row["transcript"]), resp.usage
 
 
-def apply_guards(out):
+def apply_guards(out, transcript):
     """Make the labels consistent with the model's own checklist answers."""
+    # a final request to stop calling is Not Interested / Do Not Contact (EX5)
+    customer_turns = re.findall(r"^\s*Customer\s*:\s*(.*)$", transcript, re.MULTILINE)
+    if re.search(NO_CONTACT, " ".join(customer_turns[-4:]), re.IGNORECASE):
+        out["disposition"], out["sub_disposition"], out["lead_quality"] = "Not Interested", "Do Not Contact", "Low"
+        return out
+
     if out["disposition"] == "Not Interested" and out["rejection_condition"]:
         out["disposition"] = "Follow-up Required"                  # a conditional rejection is not a refusal
     if out["disposition"] == "Follow-up Required" and out["main_blocker"] != "none":

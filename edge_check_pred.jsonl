@@ -1,0 +1,6 @@
+{"transcript_id": "EDGE-02", "disposition": "Invalid Lead", "sub_disposition": "No Pain Need", "lead_quality": "Not Qualified", "next_call_at": null}
+{"transcript_id": "EDGE-05", "disposition": "Invalid Lead", "sub_disposition": "Outside Service Area", "lead_quality": "Not Qualified", "next_call_at": null}
+{"transcript_id": "EDGE-07", "disposition": "Not Interested", "sub_disposition": "Do Not Contact", "lead_quality": "Low", "next_call_at": null}
+{"transcript_id": "EDGE-10", "disposition": "Appointment Scheduled", "sub_disposition": "Clinic Visit", "lead_quality": "Medium", "next_call_at": null}
+{"transcript_id": "EDGE-13", "disposition": "Follow-up Required", "sub_disposition": "Treatment Concern", "lead_quality": "Medium", "next_call_at": "2026-11-10T11:00:00+05:30"}
+{"transcript_id": "EDGE-19", "disposition": "Follow-up Required", "sub_disposition": "Vague Deferral", "lead_quality": "Low", "next_call_at": "2026-11-12T11:00:00+05:30"}
