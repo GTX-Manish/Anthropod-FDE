@@ -22,9 +22,9 @@ To reproduce my numbers on the 50 labelled calls:
 
 ```bash
 python make_input.py data/calls.csv data/input.jsonl     # removes the gold columns
-python -u run.py data/input.jsonl predictions.jsonl
-python evaluate.py data/calls.csv predictions.jsonl
-python test_timeparse.py                                 # date rule tests, no API calls
+python -u run.py data/input.jsonl outputs/predictions.jsonl
+python evaluate.py data/calls.csv outputs/predictions.jsonl
+python test_parse.py                                 # date rule tests, no API calls
 ```
 
 **One thing to check:** the end of the run should say `failed: 0`. If Groq can't answer a call even after retrying (for example, the daily token limit is used up), that call still gets a valid fallback label so the output file is complete, and the run tells you which calls failed. On Groq's free tier, 50 calls take about 20 minutes because of the rate limits.
@@ -75,7 +75,7 @@ The full prompt is in `labeler.py` (`SYSTEM_PROMPT`). The user message is just `
 | `timeparse.py` | Turns callback words into an exact IST time |
 | `evaluate.py` | Per-field accuracy, exact match and the estimated 70-point score (it can also score a small subset of calls) |
 | `make_input.py` | Turns the labelled CSV into input JSONL, without the gold columns |
-| `test_timeparse.py` | 12 date tests: the sheet's EX1–EX5 examples plus phrases from real calls |
+| `test_parse.py` | 12 date tests: the sheet's EX1–EX5 examples plus phrases from real calls |
 | `predictions.jsonl` | My final predictions for the 50 calls |
 | `edge_cases.csv` | 30 test calls I wrote for situations the 50 calls don't have |
 | `gender.py`, `check_gender.py`, `gender_predictions.jsonl` | Task 2 |
