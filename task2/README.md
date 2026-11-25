@@ -71,7 +71,7 @@ There are no gold gender labels, so I checked it in three ways:
 
 1. **Clues agree with each other.** In all 9 calls where the caller says "my husband" or "my wife", the agent's "sir/ma'am" points the same way.
 2. **I read the weakest predictions** (scores of 2–4) myself, and they were all correct.
-3. **Edge cases.** `edge_cases.csv` has 30 short test calls with tricky situations: a caller saying "ma'am" to a female agent, a son calling for his mother, "MD, MS doctors", an agent saying "sir" and being corrected to "ma'am", a call with only "Mr. Arjun", and a call with no clues at all. All 30 came out right (`python check_gender.py data/edge_cases.csv outputs/edge_gender.jsonl`). These cases were written for this test, so they show the rules work as intended, not that they will be perfect on every new call.
+3. **Edge cases.** `edge_cases.csv` has 30 short test calls with tricky situations: a caller saying "ma'am" to a female agent, a son calling for his mother, "MD, MS doctors", an agent saying "sir" and being corrected to "ma'am", a call with only "Mr. Arjun", and a call with no clues at all. All 30 came out right (`python task2/check_gender.py data/edge_cases.csv task2/outputs/edge_gender.jsonl`). These cases were written for this test, so they show the rules work as intended, not that they will be perfect on every new call.
 
 ## Drawbacks
 

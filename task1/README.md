@@ -3,7 +3,7 @@
 **Task 1:** label each call with `disposition`, `sub_disposition`, `lead_quality` and `next_call_at`.
 
 ## Run it
-
+Run every command from the repo's main folder, not from inside `task1/`.
 ```bash
 python -m venv venv && source venv/bin/activate      # Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -75,7 +75,6 @@ The full prompt is in `labeler.py` (`SYSTEM_PROMPT`). The user message is just `
 | `test_parse.py` | 12 date tests: the sheet's EX1–EX5 examples plus phrases from real calls |
 | `predictions.jsonl` | My final predictions for the 50 calls |
 | `edge_cases.csv` | 30 test calls I wrote for situations the 50 calls don't have |
-| `gender.py`, `check_gender.py`, `gender_predictions.jsonl` | Task 2 |
 | `run_log.txt`, `eval_log.txt` | Output of the final run and its evaluation |
 
 ## Results
