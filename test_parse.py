@@ -1,4 +1,4 @@
-"""python test_timeparse.py - checks next_call_at against the Label Rules examples and real calls (no API)."""
+"""python test_parse.py - checks next_call_at against the Label Rules examples and real calls (no API)."""
 from labeler import next_call_at
 
 def out(disposition, callback=None, defers="no"):

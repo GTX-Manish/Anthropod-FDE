@@ -3,7 +3,7 @@
 ## Run it
 
 ```bash
-python gender.py data/input.jsonl gender_predictions.jsonl
+python gender.py data/input.jsonl outputs/gender_predictions.jsonl
 ```
 
 Each output line is `{"transcript_id", "gender", "female_score", "male_score"}`. The gender is `male`, `female` or `unknown`. It uses the Python standard library only: no transformer, no model and no API.
@@ -50,7 +50,7 @@ Why: the caller also says "sir" or "ma'am", but that's addressed to the agent, s
 
 3. total = female + male scores. 
 
-So, if total < 2 or abs(female - male)/total < 0.5 then this means that there is too less information or ambigious information. This will result in "unknown". Else, if female > male then "female" otherwise "male"
+So, if `total < 2 or abs(female - male)/total < 0.5` then this means that there is too less information or ambigious information. This will result in "unknown". Else, if female > male then "female" otherwise "male"
 
 ### A mistake I fixed
 
@@ -71,7 +71,7 @@ There are no gold gender labels, so I checked it in three ways:
 
 1. **Clues agree with each other.** In all 9 calls where the caller says "my husband" or "my wife", the agent's "sir/ma'am" points the same way.
 2. **I read the weakest predictions** (scores of 2–4) myself, and they were all correct.
-3. **Edge cases.** `edge_cases.csv` has 30 short test calls with tricky situations: a caller saying "ma'am" to a female agent, a son calling for his mother, "MD, MS doctors", an agent saying "sir" and being corrected to "ma'am", a call with only "Mr. Arjun", and a call with no clues at all. All 30 came out right (`python check_gender.py edge_cases.csv edge_gender.jsonl`). These cases were written for this test, so they show the rules work as intended, not that they will be perfect on every new call.
+3. **Edge cases.** `edge_cases.csv` has 30 short test calls with tricky situations: a caller saying "ma'am" to a female agent, a son calling for his mother, "MD, MS doctors", an agent saying "sir" and being corrected to "ma'am", a call with only "Mr. Arjun", and a call with no clues at all. All 30 came out right (`python check_gender.py data/edge_cases.csv outputs/edge_gender.jsonl`). These cases were written for this test, so they show the rules work as intended, not that they will be perfect on every new call.
 
 ## Drawbacks
 
