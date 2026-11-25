@@ -73,7 +73,7 @@ The full prompt is in `labeler.py` (`SYSTEM_PROMPT`). The user message is just `
 | `run.py` | The one command: reads the input JSONL and writes the predictions JSONL |
 | `labeler.py` | Prompt, schema, Groq call, consistency checks, `next_call_at` logic |
 | `timeparse.py` | Turns callback words into an exact IST time |
-| `evaluate.py` | Per-field accuracy, exact match and the estimated 70-point score (it can also score a small subset of calls) |
+| `evaluate.py` | Per-field accuracy, exact match and the estimated 70-point score |
 | `make_input.py` | Turns the labelled CSV into input JSONL, without the gold columns |
 | `test_parse.py` | 12 date tests: the sheet's EX1–EX5 examples plus phrases from real calls |
 | `predictions.jsonl` | My final predictions for the 50 calls |
