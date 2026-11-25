@@ -24,7 +24,7 @@ python task1/evaluate.py data/calls.csv task1/outputs/predictions.jsonl
 python task1/test_parse.py                                 # date rule tests, no API calls
 ```
 
-**One thing to check:** the end of the run should say `failed: 0`. If Groq can't answer a call even after retrying (for example, the daily token limit is used up), that call still gets a valid fallback label so the output file is complete, and the run tells you which calls failed. On Groq's free tier, 50 calls take about 20 minutes because of the rate limits.
+**One thing to check:** the end of the run should say `wrote 50 of 50 records`. If Groq can't answer a call even after retrying (for example, the daily token limit is used up), the run stops at that call instead of guessing a label. Everything finished before it stays in the output file, the run says which call failed and why, and you can run the same command again once the cause is fixed. On Groq's free tier, 50 calls take about 20 minutes because of the rate limits.
 
 ## First thought
 
@@ -59,7 +59,7 @@ The full prompt is in `labeler.py` (`SYSTEM_PROMPT`). The user message is just `
 | Output | Groq structured outputs, `json_schema` with `strict: true` |
 | Timeout | 60 s per request |
 | Retries | Groq SDK, `max_retries=8` (rate limits, network and server errors) |
-| JSON handling | Strict schema, then `json.loads`, then the consistency checks and the valid-pair check. If anything fails, the call gets a fallback record (Follow-up Required / Further Discussion / Medium / next day 11:00) |
+| JSON handling | Strict schema, then `json.loads`, then the consistency checks and the valid-pair check. If a call still fails after retrying, or its answer can't be read, the run stops there and no label is guessed |
 | Python | 3.9+ (I used 3.14). `tzdata` is needed on Windows. |
 | Dependencies | `requirements.txt` |
 
