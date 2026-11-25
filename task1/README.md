@@ -1,9 +1,6 @@
 # Aster Vale Pain Clinic: call transcript labelling
 
-This repo has both parts of the assignment:
-
-1. **Task 1:** label each call with `disposition`, `sub_disposition`, `lead_quality` and `next_call_at`.
-2. **Task 2:** find the caller's gender without a transformer model. See [GENDER.md](GENDER.md).
+**Task 1:** label each call with `disposition`, `sub_disposition`, `lead_quality` and `next_call_at`.
 
 ## Run it
 
@@ -12,7 +9,7 @@ python -m venv venv && source venv/bin/activate      # Windows: venv\Scripts\act
 pip install -r requirements.txt
 export GROQ_API_KEY=your_key                        # Windows PowerShell: $env:GROQ_API_KEY="your_key"
 
-python -u run.py INPUT.jsonl predictions.jsonl
+python -u task1/run.py INPUT.jsonl predictions.jsonl
 ```
 
 - **Input:** one JSON object per line with `transcript_id`, `call_started_at`, `timezone` and `transcript`.
@@ -21,10 +18,10 @@ python -u run.py INPUT.jsonl predictions.jsonl
 To reproduce my numbers on the 50 labelled calls:
 
 ```bash
-python make_input.py data/calls.csv data/input.jsonl     # removes the gold columns
-python -u run.py data/input.jsonl outputs/predictions.jsonl
-python evaluate.py data/calls.csv outputs/predictions.jsonl
-python test_parse.py                                 # date rule tests, no API calls
+python task1/make_input.py data/calls.csv data/input.jsonl     # removes the gold columns
+python -u task1/run.py data/input.jsonl task1/outputs/predictions.jsonl
+python task1/evaluate.py data/calls.csv task1/outputs/predictions.jsonl
+python task1/test_parse.py                                 # date rule tests, no API calls
 ```
 
 **One thing to check:** the end of the run should say `failed: 0`. If Groq can't answer a call even after retrying (for example, the daily token limit is used up), that call still gets a valid fallback label so the output file is complete, and the run tells you which calls failed. On Groq's free tier, 50 calls take about 20 minutes because of the rate limits.

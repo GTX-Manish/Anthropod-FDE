@@ -3,7 +3,7 @@
 ## Run it
 
 ```bash
-python gender.py data/input.jsonl outputs/gender_predictions.jsonl
+python task2/gender.py data/input.jsonl task2/outputs/gender_predictions.jsonl
 ```
 
 Each output line is `{"transcript_id", "gender", "female_score", "male_score"}`. The gender is `male`, `female` or `unknown`. It uses the Python standard library only: no transformer, no model and no API.
