@@ -1,0 +1,30 @@
+{"transcript_id": "EDGE-01", "disposition": "Invalid Lead", "sub_disposition": "Wrong Contact", "lead_quality": "Not Qualified", "next_call_at": null}
+{"transcript_id": "EDGE-02", "disposition": "Invalid Lead", "sub_disposition": "No Pain Need", "lead_quality": "Not Qualified", "next_call_at": null}
+{"transcript_id": "EDGE-03", "disposition": "Invalid Lead", "sub_disposition": "Test Enquiry", "lead_quality": "Not Qualified", "next_call_at": null}
+{"transcript_id": "EDGE-04", "disposition": "Invalid Lead", "sub_disposition": "Policy Exclusion", "lead_quality": "Not Qualified", "next_call_at": null}
+{"transcript_id": "EDGE-05", "disposition": "Not Interested", "sub_disposition": "Explicit Refusal", "lead_quality": "Low", "next_call_at": null}
+{"transcript_id": "EDGE-06", "disposition": "Unable to Assess", "sub_disposition": "Incomplete Conversation", "lead_quality": "Not Assessable", "next_call_at": null}
+{"transcript_id": "EDGE-07", "disposition": "Not Interested", "sub_disposition": "Explicit Refusal", "lead_quality": "Low", "next_call_at": null}
+{"transcript_id": "EDGE-08", "disposition": "Appointment Scheduled", "sub_disposition": "Online Consultation", "lead_quality": "High", "next_call_at": null}
+{"transcript_id": "EDGE-09", "disposition": "Appointment Scheduled", "sub_disposition": "Rescheduled", "lead_quality": "High", "next_call_at": null}
+{"transcript_id": "EDGE-10", "disposition": "Appointment Scheduled", "sub_disposition": "Clinic Visit", "lead_quality": "High", "next_call_at": null}
+{"transcript_id": "EDGE-11", "disposition": "Appointment Scheduled", "sub_disposition": "Clinic Visit", "lead_quality": "High", "next_call_at": "2026-11-10T10:00:00+05:30"}
+{"transcript_id": "EDGE-12", "disposition": "Appointment Scheduled", "sub_disposition": "Clinic Visit", "lead_quality": "High", "next_call_at": null}
+{"transcript_id": "EDGE-13", "disposition": "Follow-up Required", "sub_disposition": "Treatment Concern", "lead_quality": "Medium", "next_call_at": "2026-11-12T11:00:00+05:30"}
+{"transcript_id": "EDGE-14", "disposition": "Follow-up Required", "sub_disposition": "Specific Callback", "lead_quality": "Medium", "next_call_at": "2026-11-11T18:00:00+05:30"}
+{"transcript_id": "EDGE-15", "disposition": "Follow-up Required", "sub_disposition": "Treatment Concern", "lead_quality": "Medium", "next_call_at": "2026-11-12T11:00:00+05:30"}
+{"transcript_id": "EDGE-16", "disposition": "Follow-up Required", "sub_disposition": "Vague Deferral", "lead_quality": "Low", "next_call_at": "2026-11-12T11:00:00+05:30"}
+{"transcript_id": "EDGE-17", "disposition": "Follow-up Required", "sub_disposition": "Information Requested", "lead_quality": "Medium", "next_call_at": "2026-11-10T11:00:00+05:30"}
+{"transcript_id": "EDGE-18", "disposition": "Appointment Scheduled", "sub_disposition": "Clinic Visit", "lead_quality": "High", "next_call_at": null}
+{"transcript_id": "EDGE-19", "disposition": "Follow-up Required", "sub_disposition": "Vague Deferral", "lead_quality": "Low", "next_call_at": "2026-11-12T11:00:00+05:30"}
+{"transcript_id": "EDGE-20", "disposition": "Follow-up Required", "sub_disposition": "Family Discussion", "lead_quality": "Medium", "next_call_at": "2026-11-12T11:00:00+05:30"}
+{"transcript_id": "EDGE-21", "disposition": "Follow-up Required", "sub_disposition": "Specific Callback", "lead_quality": "Medium", "next_call_at": "2026-11-09T16:00:30+05:30"}
+{"transcript_id": "EDGE-22", "disposition": "Follow-up Required", "sub_disposition": "Specific Callback", "lead_quality": "Medium", "next_call_at": "2026-11-10T17:00:00+05:30"}
+{"transcript_id": "EDGE-23", "disposition": "Follow-up Required", "sub_disposition": "Specific Callback", "lead_quality": "Medium", "next_call_at": "2026-11-20T11:00:00+05:30"}
+{"transcript_id": "EDGE-24", "disposition": "Follow-up Required", "sub_disposition": "Travel Constraint", "lead_quality": "Medium", "next_call_at": "2026-11-12T11:00:00+05:30"}
+{"transcript_id": "EDGE-25", "disposition": "Follow-up Required", "sub_disposition": "Specific Callback", "lead_quality": "Low", "next_call_at": "2026-12-03T11:00:00+05:30"}
+{"transcript_id": "EDGE-26", "disposition": "Follow-up Required", "sub_disposition": "Family Discussion", "lead_quality": "Medium", "next_call_at": "2026-11-12T11:00:00+05:30"}
+{"transcript_id": "EDGE-27", "disposition": "Appointment Scheduled", "sub_disposition": "Clinic Visit", "lead_quality": "High", "next_call_at": null}
+{"transcript_id": "EDGE-28", "disposition": "Follow-up Required", "sub_disposition": "Cost Concern", "lead_quality": "Medium", "next_call_at": "2026-11-12T11:00:00+05:30"}
+{"transcript_id": "EDGE-29", "disposition": "Follow-up Required", "sub_disposition": "Specific Callback", "lead_quality": "Medium", "next_call_at": "2026-11-10T18:00:00+05:30"}
+{"transcript_id": "EDGE-30", "disposition": "Follow-up Required", "sub_disposition": "Specific Callback", "lead_quality": "Medium", "next_call_at": "2026-11-11T11:00:00+05:30"}

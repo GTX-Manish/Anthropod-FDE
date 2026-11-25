@@ -1,0 +1,26 @@
+AVT-001 sub_disposition: Family Discussion (gold Travel Constraint)
+AVT-006 lead_quality: Medium (gold Low)
+AVT-013 sub_disposition: Travel Constraint (gold Information Requested)
+AVT-015 sub_disposition: Family Discussion (gold Further Discussion) | next_call_at: 2026-10-18T11:00:00+05:30 (gold 2026-10-16T11:00:00+05:30)
+AVT-022 lead_quality: Medium (gold Low)
+AVT-030 sub_disposition: Travel Constraint (gold Current Treatment)
+AVT-031 sub_disposition: Vague Deferral (gold Travel Constraint)
+AVT-032 sub_disposition: Treatment Concern (gold Vague Deferral)
+AVT-034 sub_disposition: Travel Constraint (gold Family Discussion)
+AVT-037 disposition: Follow-up Required (gold Appointment Scheduled) | sub_disposition: Vague Deferral (gold Clinic Visit) | lead_quality: Medium (gold High) | next_call_at: 2026-10-16T11:00:00+05:30 (gold None)
+AVT-038 sub_disposition: Treatment Concern (gold Current Treatment)
+AVT-040 sub_disposition: Family Discussion (gold Travel Constraint) | lead_quality: Low (gold Medium)
+AVT-041 next_call_at: 2026-10-21T11:00:00+05:30 (gold 2026-10-19T11:00:00+05:30)
+AVT-042 next_call_at: 2026-10-17T11:00:00+05:30 (gold 2026-10-15T11:00:00+05:30)
+AVT-044 sub_disposition: Specific Callback (gold Travel Constraint)
+AVT-047 sub_disposition: Travel Constraint (gold Treatment Concern) | next_call_at: 2026-10-18T11:00:00+05:30 (gold 2026-10-15T14:26:01+05:30)
+AVT-048 sub_disposition: Family Discussion (gold Travel Constraint) | next_call_at: 2026-10-18T11:00:00+05:30 (gold 2026-10-16T11:00:00+05:30)
+AVT-050 sub_disposition: Cost Concern (gold Travel Constraint) | next_call_at: 2026-10-19T11:00:00+05:30 (gold 2026-10-17T11:00:00+05:30)
+
+records: 50
+disposition: 49/50 = 98%
+sub_disposition: 36/50 = 72%
+lead_quality: 46/50 = 92%
+next_call_at: 43/50 = 86%
+whole-record exact match: 32/50
+estimated label score: 60.1/70

@@ -1,0 +1,172 @@
+transcript_id,call_started_at,timezone,disposition,sub_disposition,lead_quality,next_call_at,gender,case_note,transcript
+EDGE-01,2026-11-09T14:00:00+05:30,Asia/Kolkata,Invalid Lead,Wrong Contact,Not Qualified,null,male,Wrong number; callback rules suppressed (F2),"Agent: Hello, am I speaking to Rakesh ji? This is Neha from Aster Vale Pain Clinic.
+Customer: No, there is no Rakesh here. I never made any enquiry.
+Agent: Sorry sir, we got this number from an enquiry form for knee pain.
+Customer: Wrong number. Nobody here has any pain problem.
+Agent: Okay sir, sorry for the trouble. Should I call you back tomorrow to check?
+Customer: No, it is the wrong number. Please update your records.
+Agent: Sure sir, I will. Thank you."
+EDGE-02,2026-11-09T14:00:00+05:30,Asia/Kolkata,Invalid Lead,No Pain Need,Not Qualified,null,female,Enquiry is not about pain at all,"Agent: Good afternoon ma'am, this is Rohan from Aster Vale Care. You had filled a form with us.
+Customer: Yes, I wanted to know if you treat hair fall. I have a lot of hair fall.
+Agent: Ma'am, we are a pain clinic. Do you have any pain anywhere, back, knee, neck?
+Customer: No, no pain at all. Only hair fall. I thought you were a skin clinic.
+Agent: Okay ma'am, then we won't be able to help with that. Sorry ma'am.
+Customer: Okay, no problem. Bye."
+EDGE-03,2026-11-09T14:00:00+05:30,Asia/Kolkata,Invalid Lead,Test Enquiry,Not Qualified,null,male,Internal test call,"Agent: Hello sir, this is Priya from Aster Vale Pain Clinic. You had enquired about back pain?
+Customer: Hi Priya, this is Karan from the IT team. That enquiry was a test entry, I was checking the new dialer.
+Agent: Oh, okay sir. So there is no patient?
+Customer: No patient. It was just a test. Please mark it as a test lead.
+Agent: Sure sir, noted."
+EDGE-04,2026-11-09T14:00:00+05:30,Asia/Kolkata,Invalid Lead,Policy Exclusion,Not Qualified,null,female,Patient is 12 (under 15); caller says 'my husband',"Agent: Hello ma'am, Sneha from Aster Vale Pain Clinic. You enquired about back pain?
+Customer: Yes, it is for my son. He has back pain after football practice.
+Agent: Okay ma'am. How old is your son?
+Customer: He is 12 years old.
+Agent: Ma'am, our clinic only treats patients who are 15 or older, so we cannot take this case.
+Customer: Oh, okay. My husband said the same. Thank you.
+Agent: Thank you ma'am. Take care."
+EDGE-05,2026-11-09T14:00:00+05:30,Asia/Kolkata,Invalid Lead,Outside Service Area,Not Qualified,null,male,"Lives abroad permanently, will not travel, refuses online care","Agent: Hello sir, Amit from Aster Vale Pain Clinic. You had enquired about neck pain.
+Customer: Yes, but I live permanently in Toronto. I am not coming to India at all.
+Agent: Sir, we can also do an online consultation with our doctor.
+Customer: No, I don't want any online consultation. I only do in-person treatment, here in Toronto.
+Agent: Understood sir. We don't have any centre there.
+Customer: Then it won't work. Thank you."
+EDGE-06,2026-11-09T14:00:00+05:30,Asia/Kolkata,Unable to Assess,Incomplete Conversation,Not Assessable,null,unknown,Silence then disconnect; no gender cue,"Agent: Hello?
+Customer: [inaudible]
+Agent: Hello, am I audible? This is Aster Vale Pain Clinic.
+Customer: [inaudible]
+Agent: Hello? Hello?
+[call disconnected]"
+EDGE-07,2026-11-09T14:00:00+05:30,Asia/Kolkata,Not Interested,Do Not Contact,Low,null,male,"Callback agreed, then final do-not-contact (EX5)","Agent: Hello sir, Ravi from Aster Vale Pain Clinic, about your knee pain enquiry.
+Customer: I am busy right now.
+Agent: No problem sir, shall I call you tomorrow at 5 pm?
+Customer: Okay.
+Agent: Great sir, and the consultation fee is 800.
+Customer: Actually no. I don't want this. Remove my number and don't call me again.
+Agent: Okay sir, I will remove your number."
+EDGE-08,2026-11-09T14:00:00+05:30,Asia/Kolkata,Appointment Scheduled,Online Consultation,High,null,female,Confirmed video consultation tomorrow,"Agent: Hello ma'am, Kavya from Aster Vale Pain Clinic. You wanted to see a doctor for lower back pain?
+Customer: Yes, but I cannot travel. Can I talk to the doctor online?
+Agent: Yes ma'am, we have a video consultation. Tomorrow at 11 am is available.
+Customer: Tomorrow 11 am is fine. Book it.
+Agent: Done ma'am, your online consultation is confirmed for tomorrow at 11 am. I will send the video link on WhatsApp.
+Customer: Okay, thank you."
+EDGE-09,2026-11-09T14:00:00+05:30,Asia/Kolkata,Appointment Scheduled,Rescheduled,High,null,male,"Missed Saturday appointment, rebooked Wednesday","Agent: Hello sir, Neha from Aster Vale Pain Clinic. You had an appointment on Saturday but you could not come.
+Customer: Yes, sorry, I had an emergency at work. I still want to see the doctor for my shoulder pain.
+Agent: No problem sir. Can I move your appointment to Wednesday at 4 pm?
+Customer: Yes, Wednesday 4 pm works.
+Agent: Done sir, your appointment is rescheduled to Wednesday at 4 pm.
+Customer: Thank you."
+EDGE-10,2026-11-09T14:00:00+05:30,Asia/Kolkata,Appointment Scheduled,Clinic Visit,Medium,null,female,"Booked 11 days away -> Medium, not High","Agent: Hello ma'am, Arjun from Aster Vale Pain Clinic, about your knee pain.
+Customer: Yes. I want to meet the doctor but I am free only after the 18th.
+Agent: Okay ma'am. The doctor is available on the 20th at 11 am.
+Customer: The 20th at 11 am is fine. Please book it.
+Agent: Confirmed ma'am, the 20th of November at 11 am at our Cedar Square clinic.
+Customer: Okay, thank you."
+EDGE-11,2026-11-09T14:00:00+05:30,Asia/Kolkata,Appointment Scheduled,Clinic Visit,High,2026-11-10T10:00:00+05:30,male,"Booking plus a separate agreed confirmation call (F3, F12)","Agent: Hello sir, Pooja from Aster Vale Pain Clinic. You enquired about back pain?
+Customer: Yes, I want to show it to the doctor this week.
+Agent: The doctor is available on Thursday at 3 pm, sir.
+Customer: Thursday 3 pm is okay. Book it.
+Agent: Done sir. I will also call you tomorrow at 10 am to confirm the documents you need to bring.
+Customer: Okay, call me tomorrow at 10.
+Agent: Sure sir."
+EDGE-12,2026-11-09T14:00:00+05:30,Asia/Kolkata,Appointment Scheduled,Clinic Visit,High,null,female,Early refusal reversed by a later booking (D2),"Agent: Hello ma'am, Rahul from Aster Vale Pain Clinic about your neck pain.
+Customer: I am not interested, I am already tired of doctors.
+Agent: I understand ma'am. Our treatment is non-surgical and the first consultation tells you the cause.
+Customer: Hmm. Okay, actually let me try once. Is Friday possible?
+Agent: Yes ma'am, Friday at 12 noon.
+Customer: Okay, book Friday 12.
+Agent: Confirmed ma'am, Friday at 12 noon."
+EDGE-13,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Treatment Concern,Medium,2026-11-10T11:00:00+05:30,male,Conditional 'forget it' is not a refusal; agent's unscheduled promise -> +1 day (EX4),"Agent: Hello sir, Simran from Aster Vale Pain Clinic about your back pain.
+Customer: Which doctor will see me? I will only come if it is a senior specialist.
+Agent: Sir, all our doctors are pain specialists.
+Customer: That's not an answer. Only if you tell me the doctor's experience will I come. Otherwise forget it.
+Agent: Okay sir, I will check the doctor's details and call you."
+EDGE-14,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Specific Callback,Medium,2026-11-11T18:00:00+05:30,female,"'Parso' with evening, no blocker","Agent: Hello ma'am, Aditya from Aster Vale Pain Clinic about your heel pain.
+Customer: Yes, I am interested, but I am in the middle of something right now.
+Agent: No problem ma'am. When should I call you?
+Customer: Call me parso in the evening.
+Agent: Sure ma'am, I will call you the day after tomorrow in the evening.
+Customer: Okay."
+EDGE-15,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Information Requested,Medium,2026-11-12T11:00:00+05:30,male,Customer will review requested profiles; vague postponement -> +3,"Agent: Hello sir, Megha from Aster Vale Pain Clinic about your father's knee pain.
+Customer: Yes. Before deciding, please send me the doctor's profile and the treatment brochure.
+Agent: Sure sir, I will WhatsApp them now.
+Customer: I will go through them and then let you know.
+Agent: Okay sir."
+EDGE-16,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Vague Deferral,Medium,2026-11-12T11:00:00+05:30,female,"Plain 'think and call later', no named blocker","Agent: Hello ma'am, Vikram from Aster Vale Pain Clinic about your shoulder pain.
+Customer: Yes, I heard about the treatment. I need to think about it.
+Agent: Of course ma'am. Can I help with any questions?
+Customer: No, I will think and call you later.
+Agent: Okay ma'am."
+EDGE-17,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Further Discussion,Medium,2026-11-10T11:00:00+05:30,male,"Open enquiry, no blocker, no deferral, no agreed time","Agent: Hello sir, Ananya from Aster Vale Pain Clinic about your back pain.
+Customer: Yes, what kind of procedures do you do?
+Agent: Sir, we have more than 20 non-surgical procedures. The doctor decides after diagnosis.
+Customer: Okay. And where is the clinic?
+Agent: Cedar Square, sir. I will send you the location and give you a call again.
+Customer: Okay."
+EDGE-18,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Specific Callback,Medium,2026-11-12T16:00:00+05:30,female,Callback amended from Wednesday to Thursday 4,"Agent: Hello ma'am, Karan from Aster Vale Pain Clinic about your knee pain.
+Customer: I am interested but I can't talk now. Call me on Wednesday.
+Agent: Sure ma'am, Wednesday.
+Customer: Actually Thursday at 4 is better for me.
+Agent: Okay ma'am, Thursday at 4 pm then.
+Customer: Yes, okay."
+EDGE-19,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Vague Deferral,Medium,2026-11-12T11:00:00+05:30,male,Agreed callback later cancelled into a vague deferral (F9),"Agent: Hello sir, Tanvi from Aster Vale Pain Clinic about your neck pain.
+Customer: Call me tomorrow at 11.
+Agent: Okay sir, tomorrow at 11.
+Customer: Actually, don't call tomorrow. I'm not sure when I'll be free. I will call you myself when I can.
+Agent: Okay sir, no problem."
+EDGE-20,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Vague Deferral,Medium,2026-11-12T11:00:00+05:30,female,"'Next week after the wedding' is vague, not next Monday (F12)","Agent: Hello ma'am, Rohit from Aster Vale Pain Clinic about your back pain.
+Customer: Yes, I want to come, but my daughter's wedding is going on.
+Agent: Okay ma'am. When should I call?
+Customer: Call me next week, after the wedding is over.
+Agent: Sure ma'am, after the wedding."
+EDGE-21,2026-11-09T14:00:30+05:30,Asia/Kolkata,Follow-up Required,Specific Callback,Medium,2026-11-09T16:00:30+05:30,male,'In two hours' keeps the seconds (F10),"Agent: Hello sir, Isha from Aster Vale Pain Clinic about your knee pain.
+Customer: I am driving. Call me in two hours.
+Agent: Sure sir, I will call you in two hours.
+Customer: Okay."
+EDGE-22,2026-11-09T18:30:00+05:30,Asia/Kolkata,Follow-up Required,Specific Callback,Medium,2026-11-10T17:00:00+05:30,female,"Time only, already past today -> tomorrow (F5)","Agent: Hello ma'am, Dev from Aster Vale Pain Clinic about your hip pain.
+Customer: Call me at 5, I'll be free then.
+Agent: Okay ma'am, at 5.
+Customer: Yes."
+EDGE-23,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Specific Callback,Medium,2026-11-20T11:00:00+05:30,male,'Next Friday' from a Monday = Friday of the following week (F4),"Agent: Hello sir, Riya from Aster Vale Pain Clinic about your lower back pain.
+Customer: I'm interested. Call me next Friday.
+Agent: Sure sir, next Friday.
+Customer: Okay."
+EDGE-24,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Travel Constraint,Low,2026-11-12T11:00:00+05:30,female,"Away for two months -> Travel blocker, deferral > 30 days -> Low","Agent: Hello ma'am, Nikhil from Aster Vale Pain Clinic about your knee pain.
+Customer: I am going to my son's place in the US for two months.
+Agent: Okay ma'am. Would you like to see the doctor before you go?
+Customer: No, there is no time. I will contact you after I come back.
+Agent: Okay ma'am."
+EDGE-25,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Specific Callback,Medium,2026-12-03T11:00:00+05:30,male,Explicit month and day without year (F6),"Agent: Hello sir, Shreya from Aster Vale Pain Clinic about your shoulder pain.
+Customer: I am interested, but call me on December 3rd.
+Agent: Sure sir, December 3rd.
+Customer: Yes, okay."
+EDGE-26,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Family Discussion,Medium,2026-11-12T11:00:00+05:30,male,Caller says ma'am to female agent; agent uses no honorific; 'my wife' decides,"Agent: Hello, this is Nisha from Aster Vale Pain Clinic. You enquired about back pain?
+Customer: Yes ma'am. I have had back pain for two years.
+Agent: Okay. Would you like to book a consultation?
+Customer: Ma'am, I need to discuss it with my wife first. I'll let you know.
+Agent: Okay, no problem."
+EDGE-27,2026-11-09T14:00:00+05:30,Asia/Kolkata,Appointment Scheduled,Clinic Visit,High,null,male,"Son calls for his mother: caller is male, patient is female","Agent: Hello sir, Aarti from Aster Vale Pain Clinic.
+Customer: Yes, I enquired for my mother. She has severe knee pain.
+Agent: Okay sir. How old is she?
+Customer: She is 68.
+Agent: Sir, the doctor is available tomorrow at 4 pm.
+Customer: Tomorrow 4 pm is fine. I will bring her.
+Agent: Done sir, confirmed for tomorrow at 4 pm."
+EDGE-28,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Cost Concern,Medium,2026-11-12T11:00:00+05:30,female,"'MD, MS doctors' must not count as the title Ms","Agent: Hello ma'am, Sahil from Aster Vale Pain Clinic about your neck pain.
+Customer: Who are your doctors?
+Agent: Ma'am, they are MD, MS doctors with a fellowship in pain management.
+Customer: And what is the cost of the procedure?
+Agent: Ma'am, it starts from 15,000.
+Customer: That is too much for me right now. Let me arrange the money and I'll let you know.
+Agent: Okay ma'am."
+EDGE-29,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Specific Callback,Medium,2026-11-10T18:00:00+05:30,female,"Agent says sir once, caller corrects, agent switches to ma'am","Agent: Hello sir, Varun from Aster Vale Pain Clinic.
+Customer: It's ma'am, not sir.
+Agent: Sorry ma'am, my apologies. You enquired about knee pain, ma'am?
+Customer: Yes. But call me tomorrow evening, I'm at work.
+Agent: Sure ma'am, tomorrow evening.
+Customer: Okay."
+EDGE-30,2026-11-09T14:00:00+05:30,Asia/Kolkata,Follow-up Required,Specific Callback,Medium,2026-11-11T11:00:00+05:30,male,"Only a title cue: 'Mr. Arjun', no sir/ma'am","Agent: Hi, am I speaking to Mr. Arjun Mehra?
+Customer: Yes, speaking.
+Agent: Mr. Arjun, this is Kriti from Aster Vale Pain Clinic about your back pain.
+Customer: Yes, I'm interested. Call me on Wednesday.
+Agent: Sure, Wednesday.
+Customer: Okay."
