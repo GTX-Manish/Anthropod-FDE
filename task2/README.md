@@ -24,7 +24,7 @@ I decided to use a point system:
 
 | Clue | Whose words | Points | Why |
 |---|---|---|---|
-| "my husband" → female, "my wife" → male | caller | 3 each | The caller describes themselves; the strongest clue |
+| "my husband" → female, "my wife" → male | caller | 3 each | The caller describes themselves the strongest clue |
 | "Mrs/Ms/Miss Name" → female, "Mr Name" → male | agent | 2 each | Strong but rare |
 | "ma'am / madam" → female, "sir" → male | agent | 1 each | Agents repeat it many times, so it adds up |
 
